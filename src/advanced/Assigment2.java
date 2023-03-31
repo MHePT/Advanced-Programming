@@ -2,18 +2,18 @@ package advanced;
 
 public class Assigment2 {
     
-    void Sort(Array_Stack stack) {
+    void Sort(Stack_Compostion_Comparable stack) {
 
     if (stack == null)
         return;
      
-    int x = stack.pop();
+    Object x = stack.pop();
      
     Sort(stack);
      
-    Array_Stack temp;
+    Stack_Compostion_Comparable temp = null;
      
-    while (!stack.empty() && stack.top() > x) 
+    while (!stack.isEmpty() && stack.peek().compareTo(x) > 0) 
         temp.push(stack.pop());
     
      

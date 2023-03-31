@@ -89,4 +89,16 @@ public class LinkedList < T > {
             Runner = Runner.getNext();
         }
     }
+
+    T getFirst() {
+        return First.getData();
+    }
+
+    T getLast() {
+        return Last.getData();
+    }
+
+    String getName() {
+        return Name;
+    }
 }
