@@ -21,7 +21,7 @@ public class Tree<T extends Comparable<T> > {
         if(root == null)
             return;
         
-        System.out.println(""+root.Data);
+        System.out.println(""+root);//Same as root.Data
         Print_Pre_Order_Helper(root.Left);
         Print_Pre_Order_Helper(root.Right);
     }
@@ -33,7 +33,7 @@ public class Tree<T extends Comparable<T> > {
         
         Print_Pre_Order_Helper(root.Left);
         Print_Pre_Order_Helper(root.Right);
-        System.out.println(""+root.Data);
+        System.out.println(""+root);//Same as root.Data
     }
     
     private void Print_in_Order_Helper(Tree_Node<T> root){
@@ -42,7 +42,7 @@ public class Tree<T extends Comparable<T> > {
             return;
         
         Print_Pre_Order_Helper(root.Left);
-        System.out.println(""+root.Data);
+        System.out.println(""+root);//Same as root.Data
         Print_Pre_Order_Helper(root.Right);
     }
     

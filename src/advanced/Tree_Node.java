@@ -26,4 +26,9 @@ public class Tree_Node < T extends Comparable<T> > {
         }
     }
     
+    @Override
+    public String toString(){
+        return Data.toString();
+    }
+    
 }
