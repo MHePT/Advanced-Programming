@@ -1,5 +1,7 @@
 package advanced;
 
+import java.util.ArrayList;
+
 public class Advanced {
 
     public static void main(String[] args) {
@@ -9,6 +11,8 @@ public class Advanced {
         
         g1.Print();
         g2.Print();
+        
+        ArrayList<Integer> arr = new ArrayList<>();
         
     }
     
