@@ -16,6 +16,40 @@ public class Tree<T extends Comparable<T> > {
             root.insert(insertValue);
     }
     
+    private boolean Remove_Helper(Tree_Node<T> root,T removeValue){
+        
+        if(root == null)
+            return false;
+                
+        if(removeValue.compareTo(root.Data) > 0)
+           return Remove_Helper(root.Right,removeValue);
+        
+        if(removeValue.compareTo(root.Data) < 0)
+           return Remove_Helper(root.Left,removeValue);
+        
+        if(removeValue.compareTo(root.Data) == 0)
+            root.Data = null;
+        
+        return true;
+    }
+    
+    private boolean Search_Helper(Tree_Node<T> root,T Target){
+        
+        if(root == null)
+            return Target == null;
+                
+        if(Target.compareTo(root.Data) > 0)
+           return Remove_Helper(root.Right,Target);
+        
+        if(Target.compareTo(root.Data) < 0)
+           return Remove_Helper(root.Left,Target);
+        
+        if(Target.compareTo(root.Data) == 0)
+            return true;
+        
+        return false;
+    }
+    
     private void Print_Pre_Order_Helper(Tree_Node<T> root){
         
         if(root == null)
@@ -56,6 +90,14 @@ public class Tree<T extends Comparable<T> > {
     
     void Print_in_Order(){
         Print_in_Order_Helper(root);
+    } 
+    
+    boolean Remove(T removeValue){
+       return Remove_Helper(root, removeValue);
+    }
+    
+    boolean Search(T Target){
+       return Search_Helper(root, Target);
     }
     
 }
