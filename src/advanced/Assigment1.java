@@ -16,9 +16,9 @@ public class Assigment1 {
             Temp.Insert_At_Front(d);
         }
         
-        while (!Temp.isEmpty()) {
+        while (!Temp.isEmpty()) 
             L.Insert_At_Front(Temp.Remove_From_Front());
-        }
+        
     }
     
 }

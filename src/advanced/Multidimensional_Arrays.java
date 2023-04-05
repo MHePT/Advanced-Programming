@@ -29,6 +29,9 @@ public class Multidimensional_Arrays {
                  arr[i][j] = i*j;
         
         //Printing
+        
+        System.out.println("My 2D Array:");
+        
         for (int i = 0; i<arr.length;i++){
             for (int j : arr[i]){
                 
@@ -54,6 +57,9 @@ public class Multidimensional_Arrays {
                     arr[i][j][k] = i*j*k;
         
         //Printing
+        
+        System.out.println("My 3D Array:");
+        
         for (int i = 0; i<arr.length;i++){
             for (int j = 0; j<arr[0].length;i++){
                 for (int k = 0; k<arr[0][0].length;i++){
