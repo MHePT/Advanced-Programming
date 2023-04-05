@@ -4,8 +4,8 @@ public class Tree<T extends Comparable<T> > {
     
     private Tree_Node<T> root;
     
-    Tree(){
-        root = null;
+    Tree(Tree_Node<T> root){
+        this.root = root;
     }
     
     void insert(T insertValue){
