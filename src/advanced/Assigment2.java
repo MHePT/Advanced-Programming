@@ -1,27 +1,31 @@
 package advanced;
 
-public class Assigment2 {
-    
-    void Sort(Stack_Compostion_Comparable stack) {
+import java.util.Stack;
 
-    if (stack == null)
-        return;
-     
-    Object x = stack.pop();
-     
-    Sort(stack);
-     
-    Stack_Compostion_Comparable temp = null;
-     
-    while (!stack.isEmpty() && stack.peek().compareTo(x) > 0) 
-        temp.push(stack.pop());
-    
-     
-    stack.push(x);
-     
-    while (temp != null) 
-        stack.push(temp.pop());
-    
-}
-    
+public class Assigment2 {
+
+    void Sort(Stack<Integer> stack) {
+
+        if (stack.isEmpty()) 
+            return;
+        
+
+        Integer x = stack.pop();
+
+        Sort(stack);
+
+        Stack<Integer> temp = new Stack<>();
+
+        while (!stack.isEmpty() && stack.peek() > x) 
+            temp.push(stack.pop());
+        
+
+        stack.push(x);
+
+        while (!temp.isEmpty()) 
+            stack.push(temp.pop());
+        
+
+    }
+
 }

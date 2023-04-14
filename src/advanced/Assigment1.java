@@ -1,23 +1,25 @@
 package advanced;
 
+import java.util.LinkedList;
+
 public class Assigment1 {
     
-    static void Display_Reverse(LinkedList L) {
+    static void Display(LinkedList L) {
 
-        LinkedList<Integer> Temp = new LinkedList("Temp");
+        LinkedList<Integer> Temp = new LinkedList();
 
         while (!L.isEmpty()) {
 
-            int d = (int) L.Remove_From_Front();
+            int d = (int) L.removeFirst();
             
             if(d%2==0)
             System.out.println(d);
 
-            Temp.Insert_At_Front(d);
+            Temp.addFirst(d);
         }
         
         while (!Temp.isEmpty()) 
-            L.Insert_At_Front(Temp.Remove_From_Front());
+            L.addFirst(Temp.removeFirst());
         
     }
     
