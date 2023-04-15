@@ -98,7 +98,4 @@ public class LinkedList < T > {
         return Last.getData();
     }
 
-    String getName() {
-        return Name;
-    }
 }
