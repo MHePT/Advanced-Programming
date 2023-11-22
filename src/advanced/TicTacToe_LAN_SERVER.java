@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package advanced;
 
 import java.io.IOException;
@@ -13,15 +9,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author henawy
- */
 public class TicTacToe_LAN_SERVER extends javax.swing.JFrame implements Runnable {
 
-    /**
-     * Creates new form TicTacToe
-     */
     String message;
     boolean your_turn = true;
     private ObjectInputStream input;
@@ -326,9 +315,7 @@ public class TicTacToe_LAN_SERVER extends javax.swing.JFrame implements Runnable
         }
     }//GEN-LAST:event_jButton9ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -351,10 +338,6 @@ public class TicTacToe_LAN_SERVER extends javax.swing.JFrame implements Runnable
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(TicTacToe_LAN_SERVER.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {

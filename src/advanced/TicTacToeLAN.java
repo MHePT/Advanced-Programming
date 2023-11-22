@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package advanced;
 
 import java.io.IOException;
@@ -13,15 +9,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author henawy
- */
 public class TicTacToeLAN extends javax.swing.JFrame implements Runnable {
 
-    /**
-     * Creates new form TicTacToe
-     */
     String message;
     boolean your_turn = false;
     private ObjectInputStream input;
@@ -210,9 +199,9 @@ public class TicTacToeLAN extends javax.swing.JFrame implements Runnable {
 
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if(your_turn)
+        if (your_turn)
         try {
-            
+
             output.writeObject("1");
             jButton1.setText("X");
             jButton1.setEnabled(false);
@@ -225,7 +214,7 @@ public class TicTacToeLAN extends javax.swing.JFrame implements Runnable {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        if(your_turn)
+        if (your_turn)
         try {
             output.writeObject("2");
             jButton2.setText("X");
@@ -238,7 +227,7 @@ public class TicTacToeLAN extends javax.swing.JFrame implements Runnable {
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-        if(your_turn)
+        if (your_turn)
         try {
             output.writeObject("3");
             jButton3.setText("X");
@@ -251,7 +240,7 @@ public class TicTacToeLAN extends javax.swing.JFrame implements Runnable {
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
-        if(your_turn)
+        if (your_turn)
         try {
             output.writeObject("4");
             jButton4.setText("X");
@@ -264,7 +253,7 @@ public class TicTacToeLAN extends javax.swing.JFrame implements Runnable {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
-        if(your_turn)
+        if (your_turn)
         try {
             output.writeObject("5");
             jButton5.setText("X");
@@ -277,7 +266,7 @@ public class TicTacToeLAN extends javax.swing.JFrame implements Runnable {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        if(your_turn)
+        if (your_turn)
         try {
             output.writeObject("6");
             jButton6.setText("X");
@@ -290,7 +279,7 @@ public class TicTacToeLAN extends javax.swing.JFrame implements Runnable {
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
-        if(your_turn)
+        if (your_turn)
         try {
             output.writeObject("7");
             jButton7.setText("X");
@@ -303,7 +292,7 @@ public class TicTacToeLAN extends javax.swing.JFrame implements Runnable {
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
-        if(your_turn)
+        if (your_turn)
         try {
             output.writeObject("8");
             jButton8.setText("X");
@@ -316,7 +305,7 @@ public class TicTacToeLAN extends javax.swing.JFrame implements Runnable {
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         // TODO add your handling code here:
-        if(your_turn)
+        if (your_turn)
         try {
             output.writeObject("9");
             jButton9.setText("X");
@@ -327,9 +316,7 @@ public class TicTacToeLAN extends javax.swing.JFrame implements Runnable {
         }
     }//GEN-LAST:event_jButton9ActionPerformed
 
-    /**
-     * @param args the command line arguments
-     */
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -397,7 +384,9 @@ public class TicTacToeLAN extends javax.swing.JFrame implements Runnable {
         try {
             message = (String) input.readObject();
             TextArea.setText(message);
-        } catch (Exception err) {System.out.println(err.getMessage());}
+        } catch (Exception err) {
+            System.out.println(err.getMessage());
+        }
         while (true) {
             try {
                 message = (String) input.readObject();
